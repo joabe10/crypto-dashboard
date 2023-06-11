@@ -1,7 +1,10 @@
+import {useState} from 'react'
 import ExchangeRate from "./ExchangeRate";
 
 function CurrencyConverter() {
     const currencies = ['BTC', 'ETH', 'USD', 'XRP', 'LTC', 'ADA']
+    const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
+    const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('BTC')
 
     return (
 
@@ -19,8 +22,13 @@ function CurrencyConverter() {
                             />                
                         </td>
                         <td>
-                            <select value={""} name="currency-option-1" className="currency-options">
-                              {currencies.map((currency, _index) => (<option key={_index}>{currency}</option>))}
+                            <select 
+                                value={chosenPrimaryCurrency} 
+                                name="currency-option-1" 
+                                className="currency-options"
+                                onChange={(e) => setChosenPrimaryCurrency(e.target.value)}
+                            >
+                                {currencies.map((currency, _index) => (<option key={_index}>{currency}</option>))}
                             </select>
                         </td>
                     </tr>
@@ -33,7 +41,11 @@ function CurrencyConverter() {
                             />                
                         </td>
                         <td>
-                            <select value={""} name="currency-option-2" className="currency-options">
+                            <select 
+                                value={chosenSecondaryCurrency} 
+                                name="currency-option-2" className="currency-options"
+                                onChange={(e) => setChosenSecondaryCurrency(e.target.value)}
+                            >
                                 {currencies.map((currency) => (<option>{currency}</option>))}
                             </select>
                         </td>
