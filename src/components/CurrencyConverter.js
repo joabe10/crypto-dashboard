@@ -1,10 +1,43 @@
 import {useState} from 'react'
-import ExchangeRate from "./ExchangeRate";
+import ExchangeRate from "./ExchangeRate"
+import axios from 'axios'
 
 function CurrencyConverter() {
     const currencies = ['BTC', 'ETH', 'USD', 'XRP', 'LTC', 'ADA']
     const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
     const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('BTC')
+    const [amount, setAmount] = useState(1)
+    
+    const convert = () => { 
+
+        const options = {
+        method: 'GET',
+        url: 'https://alpha-vantage.p.rapidapi.com/query',
+        params: {
+            from_currency: chosenPrimaryCurrency,
+            function: 'CURRENCY_EXCHANGE_RATE',
+            to_currency: chosenSecondaryCurrency
+        },
+        headers: {
+            'X-RapidAPI-Key': 'c7ff28fcb7msh976522891f3c1e0p14b690jsn3dcbe1dec320',
+            'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
+        }
+        };
+          
+        axios.request(options).then((response) => {
+            console.log(response.data)
+        }).catch((error)=> {
+            console.error(error)
+        })
+    }
+
+        //   try {
+        //       async const response = await axios.request(options);
+        //       console.log(response.data);
+        //   } catch (error) {
+        //       console.error(error);
+        //   }
+   
 
     return (
 
@@ -18,7 +51,8 @@ function CurrencyConverter() {
                             <input 
                                 type="number"
                                 name="currency-amount-1"
-                                value={""} 
+                                value={amount} 
+                                onChange={(e)=> setAmount(e.target.value)}
                             />                
                         </td>
                         <td>
@@ -52,6 +86,9 @@ function CurrencyConverter() {
                     </tr>
                 </tbody>
             </table>
+
+            <button id='convert-button' onClick={convert}>Convert</button>
+
         </div>
         
         <ExchangeRate />
