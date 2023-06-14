@@ -21,7 +21,7 @@ function CurrencyConverter() {
             to_currency: chosenSecondaryCurrency
         },
         headers: {
-            'X-RapidAPI-Key': 'c7ff28fcb7msh976522891f3c1e0p14b690jsn3dcbe1dec320',
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
             'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
         }
         };

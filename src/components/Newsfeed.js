@@ -11,7 +11,7 @@ const options = {
   method: 'GET',
   url: 'https://crypto-news-live9.p.rapidapi.com/news/CryptoNews',
   headers: {
-    'X-RapidAPI-Key': 'c7ff28fcb7msh976522891f3c1e0p14b690jsn3dcbe1dec320',
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
     'X-RapidAPI-Host': 'crypto-news-live9.p.rapidapi.com'
   }
 };
@@ -32,7 +32,7 @@ axios.request(options).then((response) => {
   return (
       <div className="news-feed">
         <h2>News feed</h2>
-        {first7articles.map((article) => (
+        {first7articles?.map((article) => (
         <div>
           <a href='article.url'><p>{article.title}</p></a>
           </div>))}
