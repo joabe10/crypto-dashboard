@@ -28,7 +28,9 @@ code {
 }
 
 .exchange-rate {
-  background-color: white;
+  background-color: blue;
+  padding: 2rem;
+  color: white;
 }
 
 .app {

@@ -3,11 +3,12 @@ import ExchangeRate from "./ExchangeRate"
 import axios from 'axios'
 
 function CurrencyConverter() {
-    const currencies = ['BTC', 'ETH', 'USD', 'XRP', 'LTC', 'ADA']
+    const currencies = ['BTC', 'ETH', 'USD', 'APE', 'BRL', 'ADA']
     const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
     const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('BTC')
     const [amount, setAmount] = useState(1)
     const [exchangeRate, setExchangeRate] = useState(0)
+    const [result, setResult] = useState(0)
     
     const convert = () => { 
 
@@ -28,17 +29,12 @@ function CurrencyConverter() {
         axios.request(options).then((response) => {
             console.log(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
             setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+            setResult(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] * amount)
         }).catch((error)=> {
             console.error(error)
         })
     }
 
-        //   try {
-        //       async const response = await axios.request(options);
-        //       console.log(response.data);
-        //   } catch (error) {
-        //       console.error(error);
-        //   }
    
     console.log(exchangeRate)
     return (
@@ -73,7 +69,8 @@ function CurrencyConverter() {
                             <input 
                                 type="number"
                                 name="currency-amount-2"
-                                value={""} 
+                                value={result} 
+                                disabled={true} //não poderei inserir dados, apenas visualizar o {result}
                             />                
                         </td>
                         <td>
@@ -93,7 +90,11 @@ function CurrencyConverter() {
 
         </div>
         
-        <ExchangeRate />
+        <ExchangeRate 
+            exchangeRate={exchangeRate}
+            chosenPrimaryCurrency={chosenPrimaryCurrency}
+            chosenSecondaryCurrency={chosenSecondaryCurrency}
+        />
       </div>
     );
   }
