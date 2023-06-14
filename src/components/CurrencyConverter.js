@@ -7,6 +7,7 @@ function CurrencyConverter() {
     const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
     const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('BTC')
     const [amount, setAmount] = useState(1)
+    const [exchangeRate, setExchangeRate] = useState(0)
     
     const convert = () => { 
 
@@ -25,7 +26,8 @@ function CurrencyConverter() {
         };
           
         axios.request(options).then((response) => {
-            console.log(response.data)
+            console.log(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+            setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
         }).catch((error)=> {
             console.error(error)
         })
@@ -38,7 +40,7 @@ function CurrencyConverter() {
         //       console.error(error);
         //   }
    
-
+    console.log(exchangeRate)
     return (
 
       <div className="currency-converter">
