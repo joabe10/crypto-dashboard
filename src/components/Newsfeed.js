@@ -7,38 +7,38 @@ function Newsfeed() {
 
   useEffect( () => {
 
-const options = {
-  method: 'GET',
-  url: 'https://crypto-news-live9.p.rapidapi.com/news/CryptoNews',
-  headers: {
-    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
-    'X-RapidAPI-Host': 'crypto-news-live9.p.rapidapi.com'
-  }
-};
+    const options = {
+      method: 'GET',
+      url: 'https://crypto-update-live.p.rapidapi.com/news',
+      headers: {
+        'X-RapidAPI-Key': 'c7ff28fcb7msh976522891f3c1e0p14b690jsn3dcbe1dec320',
+        'X-RapidAPI-Host': 'crypto-update-live.p.rapidapi.com'
+      }
+    };
 
-axios.request(options).then((response) => {
-  console.log(response.data)
-  setArticles(response.data)
-}).catch((error)=> {
-  console.error(error)
-})
+    axios.request(options).then((response) => {
+      console.log(response.data)
+      setArticles(response.data)
+    }).catch((error)=> {
+      console.error(error)
+    })
 
   }, [])
   
   console.log(articles)
 
-  const first7articles = articles?.slice(0,7)
+  const first5articles = articles?.slice(0,5)
 
   return (
       <div className="news-feed">
         <h2>News feed</h2>
-        {first7articles?.map((article) => (
+        {first5articles?.map((article) => (
         <div>
-          <a href='article.url'><p>{article.title}</p></a>
+          <a href='article.URL'><p>{article.Title}</p></a>
           </div>))}
       </div>
     );
-  }
+}
   
   export default Newsfeed;
   
