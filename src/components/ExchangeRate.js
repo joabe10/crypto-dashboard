@@ -1,5 +1,10 @@
 
 const ExchangeRate = ({exchangeData}) => {
+  // const formattedExchangeRate = exchangeData.exchangeRate.toLocaleString(undefined, {
+  //   style: 'currency'
+  //})
+
+  
     return (
       <div className="exchange-rate">
         <h3>Exchange Rate</h3>  

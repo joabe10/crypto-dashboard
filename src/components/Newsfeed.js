@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
+
 function Newsfeed() {
   const [articles, setArticles] = useState(null)
 
@@ -27,14 +28,15 @@ function Newsfeed() {
   
   console.log(articles)
 
-  const first5articles = articles?.slice(0,5)
+  const first10articles = articles?.slice(0,10)
 
   return (
       <div className="news-feed">
         <h2>News feed</h2>
-        {first5articles?.map((article) => (
+        <hr className='hr__newsfeed'></hr>
+        {first10articles?.map((article) => (
         <div>
-          <a href='article.URL'><p>{article.Title}</p></a>
+          <a href='article.URL'><p><span>&#10148;</span> {article.Title}</p></a>
           </div>))}
       </div>
     );

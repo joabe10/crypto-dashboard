@@ -63,6 +63,7 @@ function CurrencyConverter() {
                             <input 
                                 type="number"
                                 name="currency-amount-1"
+                                placeholder="Digit the amount here"
                                 value={amount} 
                                 onChange={(e)=> setAmount(e.target.value)}
                             />                

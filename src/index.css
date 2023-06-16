@@ -26,6 +26,12 @@ h2, h3{
   text-align: center;
   color: #01567a;
   font-size: 1.9rem;
+  cursor: pointer;
+}
+
+h2:hover, h3:hover{
+  color: #DD591B;
+  transition: .5s;
 }
 
 a {
@@ -40,7 +46,7 @@ a:hover {
 
 .news-feed {
   background-color: #05050B;
-  color: white;
+  color: #B6B7BC;
   opacity: .7;
   padding: 30px;
   margin: 5px;
@@ -48,6 +54,25 @@ a:hover {
   max-width: 400px;
   border-radius: 16px;
   overflow: auto;
+  max-height: 80vh;
+  border: 2px solid #DD591B;
+}
+
+.news-feed::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.news-feed::-webkit-scrollbar-thumb {
+  background-color: #01567a; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners of the thumb */
+}
+
+.news-feed::-webkit-scrollbar-thumb:hover {
+  background-color: #013045; /* Color of the scrollbar thumb on hover */
+}
+
+.news-feed::-webkit-scrollbar-track {
+  background-color: #B6B7BC; /* Color of the scrollbar track */
 }
 
 .currency-converter {
@@ -56,43 +81,46 @@ a:hover {
   padding: .5rem 1.5rem;
   border-radius: 16px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  border: 2px solid #DD591B;
 }
 
 .table__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  vertical-align: -70%;
+  color: #DD591B;
+  font-weight: bold;
 }
 
 td > input {
-  padding: 15px 15px;
-  background-color: #ffffffcd;
+  padding: 10px 10px;
+  background-color:  #B6B7BC;
   font-size: 1rem;
   text-align: center;
 }
 
-td > input:active {
+td > input:focus  {
   background-color: white;
+  transition: .5s;
 }
 
-td> input:hover  {
+td> input:hover {
   background-color: white;
+  
 }
 
 td > select {
-  padding: 15px 8px;
+  padding: 10px 8px;
   background-color: #ffffffcd;
   font-size: 1rem;
   text-align: center;
 }
 
-td:active > select {
+td > select:hover {
   background-color: white;
 }
 
-/* td:focus > select {
+td > select:focus {
   background-color: white;
-} */
+} 
 
 tr {
   color: white;
@@ -108,6 +136,17 @@ hr {
   border-top: 2px solid #DD591B;
 }
 
+.hr__newsfeed {
+  border-top: 2px solid #DD591B;
+  width: 50%;
+  position: relative;
+  top: -5px;
+}
+
+span {
+  color:#01567a;
+}
+
 .exchange-rate {
   background-color: #05050B;
   border-width: 1px;
@@ -119,6 +158,8 @@ hr {
 
 .exchange-rate > p {
   text-align: center;
+  font-size: 1.3rem;
+  color: #DD591B;
 }
 
 .exchange-rate > h1 {
@@ -133,11 +174,22 @@ hr {
 #convert-button {
   padding: 15px 40px;
   border-radius: 16px;
-  background-color: #DD591B;
+  background-image: linear-gradient(to bottom, #01567a, #013045);
   display: block;
   margin: 0 auto;
   font-size: 1.4rem;
+  color: #DD591B;
+  font-weight: bold;
+  border: 2px solid #DD591B;
   
+}
+
+#convert-button:hover {
+  background-image: linear-gradient(to top, #01567a, #013045);
+  transform: scale(1.03);
+  transition: .5s;
+  color: #DD591B;
+  border: 2px solid #DD591B;
 }
 
 .app {
