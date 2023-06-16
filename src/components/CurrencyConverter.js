@@ -58,7 +58,7 @@ function CurrencyConverter() {
         <div>
             <table>
                 <tbody>
-                    <tr>Primary Currency:
+                    <tr><span class="table__title">Primary Currency:</span>
                         <td>
                             <input 
                                 type="number"
@@ -78,7 +78,7 @@ function CurrencyConverter() {
                             </select>
                         </td>
                     </tr>
-                    <tr>Secondary Currency:
+                    <tr><span class="table__title">Secondary Currency:</span>
                         <td>
                             <input 
                                 type="number"
@@ -99,16 +99,18 @@ function CurrencyConverter() {
                     </tr>
                 </tbody>
             </table>
-
-            <button id='convert-button' onClick={convert}>Convert</button>
-
+            <div className='box-button'>
+                <button id='convert-button' onClick={convert}>Convert</button>
+            </div>
         </div>
-        
+        <hr></hr>
         <ExchangeRate 
             exchangeData={exchangeData}
            
         />
+        
       </div>
+
     );
   }
   

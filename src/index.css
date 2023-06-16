@@ -25,15 +25,16 @@ h1 {
 h2, h3{
   text-align: center;
   color: #01567a;
+  font-size: 1.9rem;
 }
 
 a {
   text-decoration: none;
-  color: white
+  color: #DD591B
 }
 
 a:hover {
-  color: #ffffff62;
+  color: white;
   transition: .5s;
 }
 
@@ -41,31 +42,102 @@ a:hover {
   background-color: #05050B;
   color: white;
   opacity: .7;
-  padding: 10px;
+  padding: 30px;
   margin: 5px;
   box-shadow: 0 3px 10px rgb(0 0 0 /0.2);
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 16px;
+  overflow: auto;
 }
 
 .currency-converter {
   background-color: #05050B;
   opacity: .7;
-  padding: 1rem;
+  padding: .5rem 1.5rem;
   border-radius: 16px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 }
 
+.table__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td > input {
+  padding: 15px 15px;
+  background-color: #ffffffcd;
+  font-size: 1rem;
+  text-align: center;
+}
+
+td > input:active {
+  background-color: white;
+}
+
+td> input:hover  {
+  background-color: white;
+}
+
+td > select {
+  padding: 15px 8px;
+  background-color: #ffffffcd;
+  font-size: 1rem;
+  text-align: center;
+}
+
+td:active > select {
+  background-color: white;
+}
+
+/* td:focus > select {
+  background-color: white;
+} */
+
 tr {
   color: white;
-  padding-right: ;
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+hr {
+  width: 50%;
+  position: relative;
+  top: 40px;
+  border:none;
+  border-top: 2px solid #DD591B;
 }
 
 .exchange-rate {
-  background-color: rgb(204,204,231);
+  background-color: #05050B;
+  border-width: 1px;
+  border-color: #DD591B ;
   padding: 2rem;
   color: white;
   border-radius: 16px;
+}
+
+.exchange-rate > p {
+  text-align: center;
+}
+
+.exchange-rate > h1 {
+  padding: 10px;
+  border: 1px solid #DD591B ;
+}
+
+.box-button {
+  margin: 1rem 0 0 0;
+}
+
+#convert-button {
+  padding: 15px 40px;
+  border-radius: 16px;
+  background-color: #DD591B;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  
 }
 
 .app {
@@ -82,3 +154,49 @@ select {
   width: 10rem;
 }
 
+/* 
+thaina 
+jac
+hellen 
+nathy 
+ge sodre
+claudio 
+romain 
+daniela
+lucas volei 
+camilla
+alexandre volei 
+namo alex
+suetonio 
+jean
+tassio 
+namo maria
+paula 
+stefany 
+namo
+
+Clube dos Bombeiros | 02 de julho
+
+Ei, pessoal!
+
+Vocês estão convidados para uma festa super animada de aniversário! Vamos comemorar em grande estilo no Clube dos Bombeiros, no dia 02 de julho.
+
+Preparem-se para um churrasco delicioso! Teremos carne suculenta, acompanhamentos saborosos e bebidas geladas.
+
+Para garantir que todos tenham um lugar reservado, pedimos que confirmem a presença com antecedência, pois a lista é limitada.
+
+Além disso, vamos estipular um valor específico para a compra de carnes e outros itens do churrasco. Dessa forma, todos podem contribuir e garantir que a festa seja um sucesso!
+
+Vamos celebrar juntos e aproveitar ao máximo! Esperamos vocês para uma tarde cheia de alegria, risadas e boa companhia.
+
+Contagem regressiva para o meu aniversário! Mal posso esperar para comemorar com todos vocês!
+
+Abraços,
+
+[Seu nome]
+
+======================================
+
+Espero que esse convite descontraído para o aniversário atenda às suas expectativas! Lembre-se de personalizar o convite com o seu nome e qualquer outra informação relevante. Divirta-se na festa e aproveite o churrasco!
+
+*/
