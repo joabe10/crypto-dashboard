@@ -2,33 +2,33 @@
 
 ## Built with:
 
-![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)   ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+[JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)   !
 
 ## Features
 
 ### General
 :weight_lifting: React component: Used to create CurrencyConverter & ExchangeRate component; <br>
-:roller_coaster: axios.request: Used to send HTTP requests to the API for fetching exchange rate and news data; <br>
-:hamburger: Mapping: Used to iterate over the 'currencies' array to generate option elements for the select dropdowns; <br>
-:ferris_wheel: Select dropdown: Used to display a dropdown menu for selecting primary and secondary currencies; <br>
+☁️ axios.request: Used to send HTTP requests to the API for fetching exchange rate and news data; <br>
+📍 Mapping: Used to iterate over the 'currencies' array to generate option elements for the select dropdowns; <br>
+🪜 Select dropdown: Used to display a dropdown menu for selecting primary and secondary currencies; <br>
 :spider_web: Array slicing: Used to extract the first 10 articles from the 'articles' array; <br>
-:framed_picture: Conditional rendering: Used to conditionally render the first 10 articles in the Newsfeed component; <br>
+📰 Conditional rendering: Used to conditionally render the first 10 articles in the Newsfeed component; <br>
 :iphone: Responsive design from 320px to 2500px; <br>
 :fountain_pen: useEffect: Used to trigger a side effect in the Newsfeed component when the component mounts; <br>
-:roller_coaster: Social network icons with background animation on hover and focus; <br>
 :barber: Custom scrollbar; <br>
-:computer_mouse: Linear gradient: Used to create a gradient background color effect in the body and convert button; <br>
+🌈 Linear gradient: Used to create a gradient background color effect in the body and convert button; <br>
 :keyboard: import: Used to import the useState hook from the 'react' library, ExchangeRate component, and axios library.
 
 ## Some techniques used 
 
 ### Functional components
 
-I used Functional components in the code to define the structure and behavior of various UI elements. They are a modern approach to writing components in React, providing a more concise and readable syntax compared to class components. This is my first time using Functional components and I notticed already that they offer better performance optimizations through hooks.
+I used Functional components in the code to define the structure and behavior of various UI elements. This is my first time using Functional components and I notticed already that they offer better performance optimizations through hooks.
 
 ### Event handling:
 
-The event handling were crucial for capturing user interactions and triggering specific actions in response. In the code, I used events like onChange and onClick to update state variables and perform tasks such as updating the chosen currencies, amount, and performing the currency conversion. These event handlers enable interactivity and user engagement within the application.
+The event handling were crucial for capturing interactions and triggering specific actions in response. In the code, I used events like onChange and onClick to update state variables and perform tasks such as updating the chosen currencies, amount, and performing the currency conversion. These event handlers enable interactivity and user engagement within the application.
 
 
 ### API integration: 
@@ -41,7 +41,7 @@ Asynchronous programming is essential when dealing with time-consuming operation
 
 ### Data mapping: 
 
-I used in the code the map() method to iterate over arrays and render dynamic content. For instance, the code dynamically renders currency options and news articles by mapping over the currencies array and the articles array, respectively. By utilizing data mapping, the code can generate repetitive UI elements efficiently and flexibly based on the available data.
+I used map() method to iterate over arrays and render dynamic content. For instance, the code dynamically renders currency options and news articles by mapping over the currencies array and the articles array, respectively. By utilizing data mapping, the code can generate repetitive UI elements efficiently and flexibly based on the available data.
 
 ### Code organization and modularity:
 
